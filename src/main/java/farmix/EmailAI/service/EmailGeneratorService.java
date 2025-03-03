@@ -1,7 +1,8 @@
 package farmix.EmailAI.service;
 
 import farmix.EmailAI.request.EmailRequest;
+import reactor.core.publisher.Mono;
 
 public interface EmailGeneratorService {
-    String generateEmailReply(EmailRequest emailRequest);
+    Mono<String> generateEmailReply(EmailRequest emailRequest);
 }
